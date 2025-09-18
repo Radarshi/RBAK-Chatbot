@@ -1,0 +1,199 @@
+Developers must use Python 3.10 or higher.
+
+GitHub is the official code repository.
+
+Development environment should be Docker-based.
+
+Code reviews are mandatory before merging into main branch.
+
+All commits must follow conventional commit messages.
+
+Feature branches must be created for all new development tasks.
+
+Main branch must always remain production-ready.
+
+Pull requests require at least one reviewer’s approval.
+
+Code must pass automated tests before merging.
+
+Unit test coverage must be at least 80%.
+
+Developers must use virtual environments for Python dependencies.
+
+Requirements must be listed in requirements.txt or pyproject.toml.
+
+Dependencies should be pinned with exact versions.
+
+Sensitive keys must be stored in .env files, not code.
+
+Docker images must be based on lightweight official images.
+
+Dockerfiles must include security patches during build.
+
+Containers should not run as root unless necessary.
+
+All services must define resource limits in Docker Compose/Kubernetes.
+
+Developers must pull the latest main branch before creating feature branches.
+
+Git history must not be rewritten on main.
+
+Continuous Integration (CI) pipelines must run on all pull requests.
+
+CI pipelines must include linting, formatting, and tests.
+
+Linting must follow PEP8 standards.
+
+Black is the default code formatter.
+
+Flake8 must be run for static code analysis.
+
+Pre-commit hooks must be enabled.
+
+Tests must be written using pytest.
+
+Mocking should be used for external service calls in tests.
+
+Integration tests must run in staging environments.
+
+End-to-end tests must be executed before production deployments.
+
+API documentation must be generated with OpenAPI/Swagger.
+
+Each microservice must have a README with setup instructions.
+
+Logs must follow JSON format for centralized logging.
+
+Log levels must be used consistently (INFO, WARN, ERROR).
+
+Debug logs should not be enabled in production.
+
+Configuration must be environment-specific (dev, staging, prod).
+
+Environment variables must be loaded using a config manager.
+
+Secrets must be managed using Vault or AWS Secrets Manager.
+
+Database credentials must not be hardcoded.
+
+All external API keys must be rotated every 90 days.
+
+PostgreSQL is the standard database unless exceptions approved.
+
+Migrations must be managed with Alembic or Django migrations.
+
+Database schema changes must be reviewed by a senior developer.
+
+Backups must run daily and be stored securely.
+
+Database access must use SSL connections.
+
+Read replicas should be used for heavy analytics queries.
+
+Indexing strategies must be documented.
+
+ORM usage must be optimized to avoid N+1 queries.
+
+Raw SQL must be reviewed before merging.
+
+Database rollback plans must be prepared before migrations.
+
+Caching must use Redis where applicable.
+
+API rate limiting must be enforced at gateway level.
+
+Services must use JWT or OAuth2 for authentication.
+
+Role-based access control must be implemented.
+
+Passwords must be hashed with bcrypt or Argon2.
+
+Multi-factor authentication is mandatory for admin accounts.
+
+HTTPS must be enforced for all environments.
+
+Certificates must be renewed automatically using Let’s Encrypt.
+
+Security scans must run weekly on all repositories.
+
+Vulnerability patches must be applied within 7 days of release.
+
+All deployments must use CI/CD pipelines.
+
+Staging deployments must occur before production releases.
+
+Production deployments must be tagged with version numbers.
+
+Rollback procedures must be defined for each release.
+
+Blue-green or canary deployments should be used where possible.
+
+Feature flags must be used for risky changes.
+
+Infrastructure must be provisioned using Terraform or Ansible.
+
+Cloud resources must be tagged with environment and owner.
+
+Cost monitoring must be enabled for all cloud resources.
+
+Unused cloud resources must be decommissioned within 30 days.
+
+Monitoring must be set up using Prometheus and Grafana.
+
+Alerts must be configured for CPU, memory, and disk usage.
+
+Application errors must be tracked using Sentry or similar tools.
+
+Uptime must be maintained above 99.9%.
+
+SLAs must be defined for all critical services.
+
+Logs must be retained for at least 90 days.
+
+Metrics dashboards must be accessible to all engineers.
+
+Incident response procedures must be documented.
+
+On-call rotations must be scheduled fairly.
+
+Post-mortems must be conducted after major incidents.
+
+Code must not contain hardcoded credentials.
+
+API responses must not expose sensitive internal data.
+
+Cross-site scripting (XSS) prevention must be implemented.
+
+SQL injection must be prevented using parameterized queries.
+
+CSRF tokens must be enabled for all web forms.
+
+File uploads must be scanned for malware.
+
+Password reset tokens must expire within 15 minutes.
+
+User sessions must expire after 30 minutes of inactivity.
+
+Rate limiting must be enabled for login attempts.
+
+Security audits must be conducted annually.
+
+Documentation must be updated before closing any ticket.
+
+ADRs (Architecture Decision Records) must be maintained.
+
+System diagrams must be kept up-to-date.
+
+New developers must complete environment setup within 1 day.
+
+Developer onboarding guides must be reviewed quarterly.
+
+Knowledge-sharing sessions must be conducted monthly.
+
+Deprecated code must be removed within 2 release cycles.
+
+Third-party libraries must be reviewed before adoption.
+
+Open-source contributions must comply with license policies.
+
+All team members must acknowledge and follow these setup instructions.

@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+streamlit
+langchain
+chromadb
+sentence-transformers
+transformers
+scikit-learn
+pydantic
+python-multipart
+requests
