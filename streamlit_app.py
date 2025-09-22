@@ -3,8 +3,8 @@ import requests
 import json
 from users import MOCK_USERS 
 
-st.set_page_config(page_title="Inadev", layout="wide")
-st.title("Inadev.ai")
+st.set_page_config(page_title="RAG Chatbot", layout="wide")
+st.title("Chatbot.ai")
 
 FASTAPI_BASE_URL = "http://127.0.0.1:8000"
 

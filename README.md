@@ -1,4 +1,4 @@
-# Inadev.ai Chatbot: A RAG System with Authentication and RBAC 🤖
+# Chatbot.ai Chatbot: A RAG System with Authentication and RBAC 🤖
 
 This project is a full-stack, retrieval-augmented generation (RAG) chatbot designed to answer questions based on a specific set of documents. It features a secure backend API built with FastAPI and an interactive frontend created with Streamlit.
 
@@ -51,7 +51,7 @@ Before running the application, make sure you have Python 3.9+ installed.
 1.  **Clone the project files:** Create the folder structure above and place the provided code into each file.
 2.  **Install dependencies:** Navigate to your project directory in the terminal and run:
     ```bash
-    pip install fastapi "uvicorn[standard]" langchain-chroma langchain-huggingface langchain-google-genai python-dotenv "passlib[bcrypt]" "python-jose[cryptography]" streamlit requests
+    pip install fastapi "uvicorn[standard]" langchain-chroma langchain-huggingface langchain-google-genai python-dotenv "passlib[bcrypt]" "python-jose[cryptography]" streamlit requests 
     ```
 3.  **Set up the `.env` file:** Create a file named `.env` in your project's root directory and add your API keys.
     ```ini
@@ -62,11 +62,15 @@ Before running the application, make sure you have Python 3.9+ installed.
     ```bash
     python ingest.py
     ```
-5.  **Run the FastAPI Backend:** In your first terminal, start the backend server.
+5. **Run the virtual environment first:** Run the virtual environmet by using 
+    ```bash
+    ./.venv/Scripts/Activate
+    ```
+6.  **Run the FastAPI Backend:** In your first terminal, start the backend server.
     ```bash
     uvicorn app:app --reload
     ```
-6.  **Run the Streamlit Frontend:** In a **separate** terminal, start the frontend application.
+7.  **Run the Streamlit Frontend:** In a **separate** terminal, start the frontend application.
     ```bash
     streamlit run streamlit_app.py
     ```
@@ -79,10 +83,10 @@ Access the application by navigating to `http://localhost:8501` in your web brow
 
 | Username | Password | Role |
 | :--- | :--- | :--- |
-| `admin` | `test-password` | `admin` |
-| `hr_user` | `test-password` | `hr` |
-| `finance_user` | `test-password` | `finance` |
-| `tech_user` | `test-password` | `tech` |
+| `radarshi` | `admin001` | `admin` |
+| `alice` | `alice004` | `hr` |
+| `shyam` | `shyam003` | `finance` |
+| `kartik` | `kartik002` | `tech` |
 
-  * **Regular Users** (e.g., `hr_user`): After logging in, you can only ask questions about HR-related documents.
+  * **Regular Users** (e.g., `hr`): After logging in, you can only ask questions about HR-related documents.
   * **Admin User**: After logging in, you can query documents from any role by selecting it from the sidebar. You can also ask generic questions like "What is the time?".
